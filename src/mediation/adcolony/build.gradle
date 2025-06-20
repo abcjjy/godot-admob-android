@@ -6,6 +6,8 @@ plugins {
 android {
     compileSdk 33
 
+    namespace "com.poingstudios.godot.admob.mediation.adcolony"
+
     defaultConfig {
         minSdk 24
         targetSdk 33
@@ -63,6 +65,7 @@ dependencies {
         compileOnly item
     }
 
+    implementation "org.godotengine:godot:4.4.1.stable"
     implementation 'androidx.appcompat:appcompat:1.6.1'
     implementation 'com.google.android.material:material:1.9.0'
     testImplementation 'junit:junit:4.13.2'

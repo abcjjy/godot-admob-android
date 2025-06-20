@@ -6,6 +6,8 @@ plugins {
 android {
     compileSdk 33
 
+    namespace "com.poingstudios.godot.admob.core"
+
     defaultConfig {
         minSdk 24
         targetSdk 33
@@ -21,6 +23,13 @@ android {
         }
     }
 
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
 
     def configFile = file('../ads/config/poing-godot-admob-ads.gdap')
 
@@ -54,8 +63,9 @@ dependencies {
         api item
     }
 
-    api project(':libs:godot-lib')
+    //api project(':libs:godot-lib')
 
+    implementation "org.godotengine:godot:4.4.1.stable"
     implementation 'androidx.appcompat:appcompat:1.6.1'
     implementation 'com.google.android.material:material:1.9.0'
     testImplementation 'junit:junit:4.13.2'
